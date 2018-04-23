@@ -8,7 +8,7 @@ class Project
   
   def self.add_backer(backer)
     @backers << backer
-    self.all.detect { | artist | k.name == name } || Artist.new(name)
+    self.all.detect { | k | k.title == title } || Artist.new(name)
   end
   
 end
