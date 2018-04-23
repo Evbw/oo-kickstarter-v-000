@@ -6,8 +6,8 @@ class Backer
       @name = name
     end
     
-    def self.back_project(backer)
-      @backed_projects << backer
+    def self.back_project(project)
+      @backed_projects << project
       self.all.detect { | backer | backer.project == project } || Project.new(project)
     end
       
