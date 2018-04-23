@@ -8,7 +8,7 @@ class Project
   
   def self.add_backer(backer)
     @backers << backer
-    self.all.detect { | project | project.backer == backer } || Backer.new(backer)
+    @title.backer = self
   end
   
 end
